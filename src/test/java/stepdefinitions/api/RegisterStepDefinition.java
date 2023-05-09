@@ -56,7 +56,6 @@ public class RegisterStepDefinition extends BaseURL {
     @Then("Request gonderilip response alinir US01")
     public void request_gonderilip_response_alinir_us01() {
         response = given().spec(spec).when().body(objectData).post("/{first}/{second}");
-        response.prettyPrint();
         actualData = response.jsonPath();
     }
 

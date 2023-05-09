@@ -41,7 +41,7 @@ public class LessonProgramAssigmentStepDefinition {
     public void postRequestGonderilirUS_12() {
         response = given().spec(spec).when().body(expectedData).post("/{first}/{second}");
         actualData = response.jsonPath();
-        System.out.println("actualData = " + actualData.prettyPrint());
+
     }
 
     @And("Ders Programinin data'daki bilgilerle olusturuldugu dogrulanir.US_12_TC_01")
@@ -87,7 +87,7 @@ public class LessonProgramAssigmentStepDefinition {
     public void getRequestGonderilirUS_12_TC_04() {
         response = given().spec(spec).when().get("/{first}/{second}");
         actualData = response.jsonPath();
-        System.out.println("actualData = " + actualData.prettyPrint());
+
     }
 
     @And("Dersin olusturuldugunun dogrulanmasi yapilir")

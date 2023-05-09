@@ -38,7 +38,6 @@ public class ViceDeanManagementStepDefinition extends BaseURL {
     @Then("Post request gönderilir US06_TC01")
     public void post_request_gönderilir_us06_tc01() {
         response = given().spec(spec).when().body(expectedData).post("/{first}/{second}");
-        response.prettyPrint();
         actualData = response.jsonPath();
     }
 

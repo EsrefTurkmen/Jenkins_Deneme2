@@ -34,7 +34,7 @@ public class LessonProgramManagementStepDefinition extends BaseURL {
     public void post_request_gonderilir_us10() {
         response = given().spec(spec).when().body(expectedData).post("/{first}/{second}");
         actualData = response.jsonPath();
-        System.out.println("actualData = " + actualData.prettyPrint());
+
     }
 
     @Then("Ders Programinin data'daki bilgilerle olusturuldugu dogrulanir")

@@ -29,7 +29,6 @@ public class LessonManagementStepDefinition extends BaseURL {
     @Then("Post request gonderilir US08_TC01")
     public void post_request_gonderilir_us08_tc01() {
         response = given(spec).when().body(expectedData).post("/{first}/{second}");
-        response.prettyPrint();
         actualData = response.jsonPath();
     }
 

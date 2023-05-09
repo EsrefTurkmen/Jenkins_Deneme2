@@ -37,7 +37,6 @@ public class ContactStepDefinition extends BaseURL {
     public void postRequestGonderilirUS03() {
         response = given().spec(spec).when().
                 body(expectedData).post("/{first}/{second}");
-        response.prettyPrint();
         actualData = response.jsonPath();
     }
 

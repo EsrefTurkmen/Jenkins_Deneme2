@@ -63,7 +63,6 @@ public class StudentInfoManagementStepDefinition extends BaseURL {
     @When("Get request gonderilir US18_TC01")
     public void get_request_gonderilir_us18_tc01() {
         response = given().spec(spec).when().get("/{first}/{second}/{third}");
-        response.prettyPrint();
         actualData = response.jsonPath();
     }
 

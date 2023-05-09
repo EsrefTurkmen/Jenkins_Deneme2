@@ -46,7 +46,6 @@ public class AdStudentManagementStepDefinition extends BaseURL {
     public void post_request_gonderilir_US25() {
         response = given().spec(spec).
                 when().body(expectedData).post("/{first}/{second}");
-        response.prettyPrint();
         actualData = response.jsonPath();
     }
 

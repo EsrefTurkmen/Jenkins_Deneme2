@@ -39,7 +39,6 @@ public class MeetAndGradesStepDefinition {
     @Then("Request gonderilip response alinir US21_TC01")
     public void request_gonderilip_response_alinir_us21_tc01() {
         response = given().spec(spec).when().get("/{first}/{second}");
-        response.prettyPrint();
         actualData = response.jsonPath();
     }
 
@@ -77,7 +76,6 @@ public class MeetAndGradesStepDefinition {
         System.out.println("id = " + id);
         lessonProgramId = new LessonProgramIdPojo(id);
         response = given().spec(spec).when().body(lessonProgramId).post("/{first}/{second}");
-        response.prettyPrint();
         actualData = response.jsonPath();
     }
 
@@ -99,7 +97,6 @@ public class MeetAndGradesStepDefinition {
         ArrayList<Integer> aa = new ArrayList<>();
         lessonProgramId = new LessonProgramIdPojo(aa);
         response = given().spec(spec).when().body(lessonProgramId).post("/{first}/{second}");
-        response.prettyPrint();
         actualData = response.jsonPath();
     }
 
@@ -114,7 +111,6 @@ public class MeetAndGradesStepDefinition {
         id.add(1);
         lessonProgramId = new LessonProgramIdPojo(id);
         response = given().spec(spec).when().body(lessonProgramId).post("/{first}/{second}");
-        response.prettyPrint();
         actualData = response.jsonPath();
     }
 
@@ -137,7 +133,6 @@ public class MeetAndGradesStepDefinition {
     @Then("Request gonderilip response alinir US21_TC05")
     public void request_gonderilip_response_alinir_us21_tc05() {
         response = given().spec(spec).when().get("/{first}/{second}/{third}");
-        response.prettyPrint();
         actualData = response.jsonPath();
     }
 
@@ -168,7 +163,6 @@ public class MeetAndGradesStepDefinition {
     @Then("Request gonderilip response alinir US21_TC06")
     public void request_gonderilip_response_alinir_us21_tc06() {
         response = given().spec(spec).when().get("/{first}/{second}");
-        response.prettyPrint();
         actualData = response.jsonPath();
     }
 
@@ -213,7 +207,6 @@ public class MeetAndGradesStepDefinition {
     @When("Post request gonderilir US19_TC01")
     public void post_request_gonderilir_US19_TC01() {
         response = given().spec(spec).when().body(expectedData4).post("/{first}/{second}");
-        response.prettyPrint();
         actualData = response.jsonPath();
     }
 
@@ -266,7 +259,6 @@ public class MeetAndGradesStepDefinition {
     @When("Put request gonderilir US20_TC02")
     public void put_request_gonderilir_US20_TC02() {
         response = given().spec(spec).when().body(expectedData4).put("/{first}/{second}/{third}");
-        response.prettyPrint();
         actualData = response.jsonPath();
     }
 

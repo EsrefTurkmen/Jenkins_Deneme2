@@ -104,7 +104,7 @@ public class DeanManagementStepDefinition extends BaseURL {
         response = given().spec(spec).
                 when().body(expectedData).
                 put("/{pp1}/{pp2}/{pp3}");
-        response.prettyPrint();
+
     }
 
     @Given("Dean icin end point hazirlanir-del")
